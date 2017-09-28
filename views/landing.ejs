@@ -84,28 +84,37 @@
 
 
 <div class="monthpicker">
-    <select name="month">
+    <select id="month" onchange="myFunction()">
         <option>Month</option>
-        <option>Jan</option>
-        <option>Fab</option>
-        <option>Mar</option>
-        <option>Apr</option>
-        <option>May</option>
-        <option>Jun</option>
-        <option>Jul</option>
-        <option>Aug</option>
-        <option>Sep</option>
-        <option>Oct</option>
-        <option>Nov</option>
-        <option>Dec</option>
+        <option value="1">Jan</option>
+        <option value="2">Fab</option>
+        <option value="3">Mar</option>
+        <option value="4">Apr</option>
+        <option value="5">May</option>
+        <option value="6">Jun</option>
+        <option value="7">Jul</option>
+        <option value="8">Aug</option>
+        <option value="9">Sep</option>
+        <option value="10">Oct</option>
+        <option value="11">Nov</option>
+        <option value="12">Dec</option>
     </select>
 
-    <select name="year">
+    <select id="year">
         <option>Year</option>
-        <option>2016</option>
-        <option>2017</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
     </selsect>
 </div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("month").value;
+        // console.log("month");
+        document.getElementById("month").innerHTML = "You selected: " + x;
+    }
+</script>
+
 
 <!-- <script>
  $('#monthpicker').monthpicker({
