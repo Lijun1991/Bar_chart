@@ -1,0 +1,25 @@
+{
+  "name": "bar_chart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lijun1991/Bar_chart.git"
+  },
+  "author": "Lijun Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lijun1991/Bar_chart/issues"
+  },
+  "homepage": "https://github.com/Lijun1991/Bar_chart#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.5",
+    "highcharts": "^5.0.14",
+    "request": "^2.83.0"
+  }
+}
