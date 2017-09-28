@@ -7,6 +7,28 @@
     <li><%= data["department"] %></li>
 <% }) %> -->
 
+<script>
+    function myFunction() {
+    var m = document.getElementById("month").value;
+    var y = document.getElementById("year").value;
+    
+    
+    // parsedData.forEach(function(data){
+    //     var key = data["department"];
+    //     depArray.forEach(function(dep){
+    //         if (dep !== key){
+    //             depArray.push(key);
+    //         }
+    //     })
+    // });
+    // depArray.forEach(function(data){
+    //     console.log(data);
+    // })
+    alert(m);
+    // alert(y);
+    }
+</script>
+
 <div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
 
 <script>
@@ -15,7 +37,7 @@
             type: 'column'
         },
         title: {
-            text: 'Bouquet.ai Exercice'
+            text: 'Bouquet.ai Exercise'
         },
         subtitle: {
             text: 'Contact amounts in Marin by department'
@@ -83,8 +105,8 @@
 </script>
 
 
-<div class="monthpicker">
-    <select id="month" onchange="myFunction()">
+<div name="monthpicker">
+    <select name="month" id="month" onchange="myFunction()">
         <option>Month</option>
         <option value="1">Jan</option>
         <option value="2">Fab</option>
@@ -100,63 +122,11 @@
         <option value="12">Dec</option>
     </select>
 
-    <select id="year">
+    <select name="year" id="year" onchange="myFunction()">
         <option>Year</option>
         <option value="2016">2016</option>
         <option value="2017">2017</option>
     </selsect>
 </div>
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("month").value;
-        // console.log("month");
-        document.getElementById("month").innerHTML = "You selected: " + x;
-    }
-</script>
-
-
-<!-- <script>
- $('#monthpicker').monthpicker({
-    years:          [2015, 2014, 2013, 2012, 2011],
-    topOffset:      6,
-    onMonthSelect:  function(m, y) {
-      console.log('Month: ' + m + ', year: ' + y);
-    }
-});
-</script>
-
-<div class="monthpicker">
-    <div class="years">
-        <select>
-        <option>2015</option>
-        <option>2014</option>
-        <option>2013</option>
-        <option>2012</option>
-        <option>2011</option>
-        </select>
-    </div>
-    <table>
-        <tr>
-        <td><button data-value="0">January</button></td>
-        <td><button data-value="1">February</button></td>
-        <td><button data-value="2">March</button></td>
-        <td><button data-value="3">April</button></td>
-        </tr>
-        <tr>
-        <td><button data-value="4">May</button></td>
-        <td><button data-value="5">June</button></td>
-        <td><button data-value="6">July</button></td>
-        <td><button data-value="7">August</button></td>
-        </tr>
-        <tr>
-        <td><button data-value="8">September</button></td>
-        <td><button data-value="9">October</button></td>
-        <td><button data-value="10">November</button></td>
-        <td><button data-value="11">December</button></td>
-        </tr>
-    </table>
-</div> -->
-
 
 <% include partials/footer %>

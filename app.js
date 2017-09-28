@@ -6,6 +6,7 @@ var HighCharts = require("highcharts");
 app.set("view engine", "ejs");
 
 
+
 app.get("/", function(req, res){
     request('https://data.marincounty.org/resource/mw3d-ud6d.json', function(error, response, body){
         if (error){
@@ -13,8 +14,15 @@ app.get("/", function(req, res){
         } else {
             if (response.statusCode == 200){
                 var parsedData = JSON.parse(body);
-                // parsedData.forEach(function(data){
-                //     if (data.department )
+                var depArray = [];
+                for (var i = 0; i < parsedData.length; i++){
+                    var name = parsedData["department"];
+                    if (depArray.indexOf(name) == -1)
+                    depArray.push(name);
+                }
+                console.log(depArray);
+                // depArray.forEach(function(data){
+                //     console.log(data);
                 // })
                 res.render("landing", {parsedData: parsedData});
                 // res.send(parsedData[0]["department"]);
